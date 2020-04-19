@@ -11,7 +11,7 @@ pipeline {
 				script {
                   sh "rm -rf myproject " 
                   
-                  sh "'${mavenHome}/bin/mvn' archetype:generate -B " +
+                  sh "mvn archetype:generate -B " +
                   "-DarchetypeGroupId=org.apache.maven.archetypes " +
                   "-DarchetypeArtifactId=maven-archetype-quickstart " +
                   "-DgroupId=com.company -DartifactId=myproject"
@@ -23,7 +23,7 @@ pipeline {
 			steps {
 				script {
                   dir ('myproject') {
-                        sh "'${mavenHome}/bin/mvn' clean install test"
+                        sh "mvn clean install test"
                   } 
 				}
 			}
