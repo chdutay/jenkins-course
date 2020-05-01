@@ -9,5 +9,15 @@ pipeline {
 		    	echo "Userid : ${utility.getBuildUser()}"
 			}
 		}
+        
+        stage('Date') {
+            steps {
+                script{
+    		    	echo "Date : ${utility.getStringDate()}"
+    		    	DATE = "${utility.getStringDate()}"
+    		    	echo "Is Date a date :  ${utility.isValidStringDate(DATE)}"
+                }
+			}
+		}
     }
 }
