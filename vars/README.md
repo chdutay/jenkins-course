@@ -1,0 +1,1 @@
+Shared groovy scripts have to be in the folder vars or src of the project at the repository base
