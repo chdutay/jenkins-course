@@ -13,3 +13,8 @@ def isValidStringDate(String date) {
 def getStringDate() {
     return "date +%d-%m-%Y".execute().text
 }
+
+// Return string with current date with format dd-mm-yyyy
+def getStringDate2() {
+    return sh(script: "date +%d-%m-%Y", returnStdout: true).trim()
+}
