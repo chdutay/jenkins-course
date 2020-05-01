@@ -1,0 +1,13 @@
+@Library('pipeline-shared-libraries')_
+
+pipeline {
+    agent any
+    stages {
+        
+        stage('User ID') {
+            steps {
+		    	echo "Userid : ${utility.getBuildUser()}"
+			}
+		}
+    }
+}
